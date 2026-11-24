@@ -1,0 +1,40 @@
+{
+  "name": "dsh-plugin-eleckoi-st-tools",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "把酒馆的快捷指令与聊天导出搬进 ElecKoi 角色对话。",
+  "exports": {
+    ".": "./src/index.js",
+    "./client": "./src/client.js",
+    "./data/*.json": "./data/*.json",
+    "./locale/*.json": "./locale/*.json",
+    "./package.json": "./package.json"
+  },
+  "engines": {
+    "dsh": "0.2.2-rc.5"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-renderer",
+        "@eleckoi/dsh-client-roleplay",
+        "@eleckoi/dsh-client-conversations",
+        "@eleckoi/dsh-product-api"
+      ]
+    }
+  },
+  "eleckoi": {
+    "developerInterfaces": []
+  },
+  "files": [
+    "src",
+    "data",
+    "locale",
+    "cordis.patch.yml",
+    "README.md"
+  ]
+}
