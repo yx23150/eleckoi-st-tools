@@ -1,0 +1,4 @@
+# 快捷指令 + 聊天导出（纯 Client 插件）
+- insert:
+    - id: eleckoi-st-tools
+      name: ./src/index.js
